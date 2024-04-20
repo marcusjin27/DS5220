@@ -83,9 +83,6 @@ history_df = history_to_dataframe(all_train_acc, all_val_acc, all_train_loss, al
 history_df.to_csv('training_history.csv', index=False)
 print('Average scores for all folds:')
 print(f'Accuracy: {np.mean(acc_per_fold)}% (+- {np.std(acc_per_fold)})')
-# Calculate mean accuracy per fold
-mean_val_acc = [np.mean(acc) for acc in all_val_acc]
-plt.figure(figsize=(8, 6))
-sns.boxplot(data=mean_val_acc)
+
 
 
