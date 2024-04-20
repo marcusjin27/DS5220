@@ -16,8 +16,6 @@ print(X)
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 print(X_train)
 # Transform the training and validation data
-X_sample, _, y_sample, _ = train_test_split(X_train, y_train, train_size=1, random_state=42)
-print(X_sample)
 
 # Create an SVM with the RBF kernel
 clf = svm.SVC(kernel='rbf', gamma='scale')
